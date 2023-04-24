@@ -1,0 +1,85 @@
+.titel{
+    display: flex;
+    justify-content: center;
+
+}
+.stappen button:not(.active2){
+    border: solid 2px var(--black);
+    background-color: transparent;
+    font-variant: all-petite-caps;
+    margin-right: 2rem;
+}
+
+.stappen{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.active2{
+    color: var(--white);
+    background-color: var(--black);
+    border: solid 2px var(--black);
+    font-variant: all-petite-caps;
+    margin-right: 2rem;
+}
+
+.foto1{
+    content: url("../fotos/stap1.png");
+    max-width: 75%;
+}
+
+.foto2{
+    content: url("../fotos/stap2.png");
+    max-width: 75%;
+}
+
+.foto3{
+    content: url("../fotos/stap3.png");
+    max-width: 75%;
+
+}
+
+.uitleg{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.text-stap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text-stap h2{
+    font-size: 2rem;
+    font-variant: all-petite-caps;
+    display: flex;
+    justify-content: center;
+}
+
+.text-stap p{
+    max-width: 20rem;
+}
+
+/* BREAKPOINTS */
+
+@media (min-width: 46.875em) {
+    .stappen{
+        display: flex;
+        flex-direction: row;
+        justify-content: unset;
+    }
+
+    .uitleg{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+
+}
+
