@@ -1,0 +1,59 @@
+.titel h1{
+    display: flex;
+    justify-content: center;
+    font-variant: all-petite-caps;
+}
+
+.spelGeheel{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.highscores{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-variant: all-petite-caps;
+}
+
+.highscores ul{
+    margin: 0;
+    padding: 0;
+}
+
+.highscores ul li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.spel-placeholder{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rechthoek{
+    display: flex;
+    justify-content: center;
+    content: url(./fotos/stap1.png);
+    width: 70%;
+    height: auto;
+}
+
+.stats{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.laatsteTijd{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-variant: all-petite-caps;
+}
