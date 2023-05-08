@@ -225,7 +225,12 @@ header nav ul li a::before {
   header nav ul li:last-child a::before {
     content: "\f059";
   }
-  
+  /* MAIN */
+.background-block{
+    background-color: #ffff;
+    border-radius: 5%;
+}
+
   
 
 
