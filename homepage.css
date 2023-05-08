@@ -8,6 +8,8 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-left: 4rem;
+    margin-right: 4rem;
 }
 
 .highscores{
@@ -36,13 +38,6 @@
     align-items: center;
 }
 
-.rechthoek{
-    display: flex;
-    justify-content: center;
-    content: url(./fotos/stap1.png);
-    width: 70%;
-    height: auto;
-}
 
 .stats{
     display: flex;
@@ -51,6 +46,14 @@
 }
 
 .laatsteTijd{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-variant: all-petite-caps;
+}
+
+.uwtijd{
     display: flex;
     flex-direction: column;
     align-items: center;
