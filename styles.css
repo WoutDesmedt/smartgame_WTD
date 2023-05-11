@@ -3,12 +3,12 @@
 }
 
 :root {
-    --white: #fff;
-    --black: #2B2B2B;
     --background-white: #f4f6f6;
     --soft-green: #6FC276;
     --offset-green: #5ea464;
     --dark-green: #244829;
+    --white: #f4f6f6;
+    --black: #010111;
     --primary: var(--black);
     --secondary: var(--background-white);
     --bg: var(--white);
@@ -68,6 +68,11 @@ h2 {
 
 /* HEADER */
 
+header {
+    border-bottom: 0.2rem solid #6FC276;
+
+
+}
 header .logo {
     width: 20%;
 }
@@ -192,18 +197,7 @@ nav a {
     position: relative;
 }
 
-nav a.active::before,
-nav a:hover::before,
-nav a:focus-visible::before {
-    content: '';
-    display: block;
-    position: absolute;
-    height: 2px;
-    background-color: var(--primary);
-    width: 2rem;
-    bottom: calc(50% - 1px);
-    left: 0;
-}
+
 
 nav a::after {
     content: '';
@@ -228,7 +222,6 @@ footer{
 header nav ul li a::before {
     display: inline-block;
     margin-right: .3rem;
-    font-family: "Font Awesome 5 Free";
     font-weight: 900;
     
 
