@@ -6,6 +6,7 @@
     --white: #f4f6f6;
     --black: #010111;
     --primary: var(--black);
+    --secondary: var(--white);
     --bg: var(--white);
 
 }
@@ -14,8 +15,8 @@
     :root {
         --primary: var(--white);
         --bg: var(--black);
+        --secondary: var(--black);
     }
-
 }
 
 html {
@@ -199,7 +200,7 @@ nav a::after {
     display: block;
     position: absolute;
     height: 2px;
-    background-color: var(--primary);
+    background-color: var(--secondary);
     bottom: 0;
     width: 100%;
     right: 0;
@@ -214,7 +215,6 @@ footer{
 header nav ul li a::before {
     display: inline-block;
     margin-right: .3rem;
-    font-family: "Font Awesome 5 Free";
     font-weight: 900;
     
 
@@ -231,11 +231,9 @@ header nav ul li a::before {
   }
   /* MAIN */
 .background-block{
-    background-color: #ffff;
+    background-color: var(--white);
     border-radius: 5%;
 }
-
-  
 
 
 /* BREAKPOINTS */
@@ -331,7 +329,7 @@ header nav ul li a::before {
 
     .navigationFooter ul li a{
         text-decoration: none;
-        color: var(--black);
+        color: var(--secondary);
         font-weight: 800;
     }
 }
