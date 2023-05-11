@@ -1,0 +1,277 @@
+body > section {
+    background-color: #fdfdfd;
+    max-width: 31.25em;
+    margin: 0 auto;
+    padding: 5%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+section {
+    display: block;
+}
+
+body {
+    background-color: #f3f3f3;
+    color: var(--text-color);
+    font-family: sans-serif;
+    margin: 1.25em;
+}
+
+:root {
+    --error-color: rgb(200, 0, 0);
+    --primary-color: rgba(36, 154, 5, 0.8);
+    --text-color: rgb(2, 2, 2);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary: var(--background-white);
+        --secondary: var(--black);
+        --bg: var(--black);
+    }
+}
+
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    background-color: var(--bg);
+    font-family: Comfortaa, sans-serif;
+    color: var(--primary)
+}
+
+figure, body {
+    margin: 0;
+}
+
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 clamp(1rem, 4vw, 8rem);
+}
+
+a:focus-visible, button:focus-visible {
+    outline: 2px dotted;
+    outline-offset: .2em;
+}
+
+img {
+    max-width: 100%;
+    aspect-ratio: 8/5;
+    object-fit: cover;
+    width: 100%; /*Trucje om aspect ratio te doen werken*/
+}
+
+h1, .subtitle {
+    font-variant: all-petite-caps;
+}
+
+h2 {
+    font-variant: petite-caps;
+}
+
+header {
+    border-bottom: 0.2rem solid #6FC276;
+}
+
+
+
+header .logo {
+    width: 20%;
+}
+
+.hamburger {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    order: -1;
+    border: none;
+    background-color: inherit;
+    color: inherit;
+    font: inherit;
+    padding: 0;
+    font-variant: all-petite-caps;
+}
+
+.hamburger .icon {
+    width: 1.5rem;
+}
+
+.hamburger .icon span {
+    height: 2px;
+    display: block;
+    background-color: var(--primary);
+    margin: 4px 0;
+    transition: transform .2s ease-in-out;
+}
+
+.hamburger[aria-expanded=true] .icon span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+}
+
+.hamburger[aria-expanded=true] .icon span:nth-child(2) {
+    visibility: hidden;
+}
+
+.hamburger[aria-expanded=true] .icon span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+}
+
+
+header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2rem 0;
+}
+
+nav {
+    width: 100%;
+    display: none;
+
+}
+
+nav.hidden {
+    display: block;
+    position: relative;
+    animation: 1s up forwards;
+}
+
+form h1 {
+    border-bottom: 1px solid #ddd;
+    font-size: 2em;
+    font-weight: 600;
+    margin: 0 0 1.25em 0;
+    padding: 2em 0 0.5em 0;
+}
+
+form > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    margin-bottom: 1.75em;
+}
+
+form input {
+    border: 1px solid #ccc;
+    font-size: 1.2em;
+    padding: 0.75em;
+    width: calc(100% - 1.5em);
+
+}
+
+form button, [type="button"], [type="reset"], [type="submit"] {
+    -webkit-appearance: button;
+}
+
+form button {
+    border: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    color: #FFF;
+    font-weight: 600;
+    padding: 4% 8%;
+    cursor: pointer;
+    margin-top: 1.75em;
+    box-shadow: 0 0 4px 2px #ddd;
+
+}
+
+form button, select {
+    text-transform: none;
+}
+
+form button, input {
+    overflow: visible;
+}
+
+form button, input, optgroup, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+
+form input[inputmode=text] {
+    height: 5em;
+    resize: vertical;
+}
+
+
+@keyframes up {
+    0%{
+        opacity: 1;
+        margin-top: 0;
+        left: 0;
+    }
+    60%{
+        opacity: 0;
+        margin-top: 0;
+        left: 100%;
+    }
+    100%{
+        opacity: 0;
+        margin-top: -150%;
+        left: 100%;
+        visibility: hidden;
+    }
+}
+
+nav.visible {
+    display: block;
+    position: relative;
+    animation: 1s down forwards;
+}
+
+@keyframes down {
+    0%{
+        visibility: visible;
+        opacity: 0;
+        margin-top: -150%;
+        left: -100%;
+    }
+    60%{
+        opacity: 0;
+        margin-top: 0;
+        left: -100%;
+    }
+    100%{
+        opacity: 1;
+        margin-top: 0;
+        left: 0;
+
+    }
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    display: block;
+    padding: 1rem 2rem;
+    text-align: center;
+    position: relative;
+}
+
+
+
+nav a::after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 2px;
+    background-color: var(--secondary);
+    bottom: 0;
+    width: 100%;
+    right: 0;
+
+}
