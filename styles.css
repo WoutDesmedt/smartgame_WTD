@@ -7,11 +7,11 @@
     --soft-green: #6FC276;
     --offset-green: #5ea464;
     --dark-green: #244829;
-    --white: #f4f6f6;
-    --black: #010111;
+    --white: #fff;
+    --black: #2B2B2B;
     --primary: var(--black);
     --secondary: var(--background-white);
-    --bg: var(--white);
+    --bg: var(--background-white);
 
 }
 
