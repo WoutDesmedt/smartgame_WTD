@@ -3,29 +3,23 @@
 }
 
 :root {
-    --white: #f4f6f6;
-    --black: #010111;
-<<<<<<< Updated upstream
-    --primary: var(--white);
-    --bg: var(--black);
-=======
+    --white: #fff;
+    --black: #2B2B2B;
+    --background-white: #f4f6f6;
+    --soft-green: #6FC276;
+    --offset-green: #5ea464;
+    --dark-green: #244829;
     --primary: var(--black);
-    --secondary: var(--white);
+    --secondary: var(--background-white);
     --bg: var(--white);
->>>>>>> Stashed changes
 
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-<<<<<<< Updated upstream
-        --primary: var(--black);
-        --bg: var(--white);
-=======
-        --primary: var(--white);
+        --primary: var(--background-white);
         --secondary: var(--black);
         --bg: var(--black);
->>>>>>> Stashed changes
     }
 }
 
@@ -225,11 +219,12 @@ nav a::after {
 
 /*FOOTER*/
 footer{
-    display: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
-<<<<<<< Updated upstream
-=======
 header nav ul li a::before {
     display: inline-block;
     margin-right: .3rem;
@@ -251,13 +246,9 @@ header nav ul li a::before {
   /* MAIN */
 .background-block{
     background-color: var(--white);
-    border-radius: 5%;
+    border-radius: 20px;
 }
 
-  
-
-
->>>>>>> Stashed changes
 /* BREAKPOINTS */
 
 @media (min-width: 46.875em) {
@@ -351,7 +342,7 @@ header nav ul li a::before {
 
     .navigationFooter ul li a{
         text-decoration: none;
-        color: var(--secondary);
+        color: var(--primary);
         font-weight: 800;
     }
 }
