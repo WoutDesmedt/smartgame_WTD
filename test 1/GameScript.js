@@ -169,12 +169,12 @@
         const piece2 = document.querySelector('#piece-2');
         const piece3 = document.querySelector('#piece-3');
         const piece4 = document.querySelector('#piece-4');
-        const bord2 = document.querySelector('#bord-2');
-        const bord9 = document.querySelector('#bord-9');
+        const bord4 = document.querySelector('#bord-4');
+        const bord3 = document.querySelector('#bord-3');
         const bord12 = document.querySelector('#bord-12');
         const bord15 = document.querySelector('#bord-15');
 
-        if (bord2.contains(piece1) && bord9.contains(piece2) && bord12.contains(piece4) && bord15.contains(piece3)) {
+        if (bord4.contains(piece1) && bord3.contains(piece2) && bord12.contains(piece4) && bord15.contains(piece3)) {
             if (!hasWon) {
                 alert('Gefeliciteerd, je hebt gewonnen!');
                 hasWon = true;
