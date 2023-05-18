@@ -1,4 +1,5 @@
-'use-strict';
+'use strict';
+
 (function () {
     const spaces = document.querySelectorAll('.space');
     const pieces = document.querySelectorAll('.piece');
@@ -26,26 +27,25 @@
                 draggedPiece = pieceObj;
             });
         });
-
     });
 
     spaces.forEach(space => {
         space.addEventListener('dragover', event => {
-            // prevent the default action of the browser on a drag over event
+            // Prevent the default action of the browser on a drag over event
             event.preventDefault();
 
-            // check if the dragged piece is currently over bord4 or bord7
+            // Check if the dragged piece is currently over bord4 or bord7
             if (draggedPiece) {
-                // do nothing and return early
+                // Do nothing and return early
                 return;
             }
 
-            // set the drop effect to move for all other spaces
+            // Set the drop effect to 'move' for all other spaces
             event.dataTransfer.dropEffect = 'move';
         });
 
         space.addEventListener('drop', event => {
-            // check if the space is empty
+            // Check if the space is empty
             if (event.target.classList.contains('space') && !event.target.hasChildNodes()) {
                 if (draggedPiece && draggedPiece.piece.hasChildNodes()) {
                     const imgElements = draggedPiece.imgs;
@@ -55,24 +55,39 @@
 
                     // Check if all the required spaces are empty
                     if (imgElements.length === 4) {
-                        if (rotationCounter === 0) {
+                        // Calculate the next indices based on the rotation counter
+                        if (
+                            rotationCounter === 0 &&
+                            currentIndex + 12 < spaces.length
+                        ) {
                             nextIndex1 = currentIndex + 4;
                             nextIndex2 = currentIndex + 8;
                             nextIndex3 = currentIndex + 12;
-                        } else if (rotationCounter === 1) {
+                        } else if (
+                            rotationCounter === 1 &&
+                            currentIndex % 4 >= 2 &&
+                            currentIndex % 4 !== 0 // Check if not in the second column
+                        ) {
                             nextIndex1 = currentIndex - 1;
                             nextIndex2 = currentIndex - 2;
                             nextIndex3 = currentIndex - 3;
-                        } else if (rotationCounter === 2) {
+                        } else if (
+                            rotationCounter === 2 &&
+                            currentIndex - 12 >= 0
+                        ) {
                             nextIndex1 = currentIndex - 4;
                             nextIndex2 = currentIndex - 8;
                             nextIndex3 = currentIndex - 12;
-                        } else if (rotationCounter === 3) {
+                        } else if (
+                            rotationCounter === 3 &&
+                            currentIndex % 4 <= 1
+                        ) {
                             nextIndex1 = currentIndex + 1;
                             nextIndex2 = currentIndex + 2;
                             nextIndex3 = currentIndex + 3;
                         }
 
+                        // Check if the next spaces are empty
                         if (
                             spaces[nextIndex1] &&
                             spaces[nextIndex2] &&
@@ -89,17 +104,31 @@
                         } else {
                             canBePlaced = false;
                         }
-                    } else if (imgElements.length === 3) {
-                        if (rotationCounter === 0) {
+                    }
+                    else if (imgElements.length === 3) {
+                        // Calculate the next indices based on the rotation counter
+                        if (
+                            rotationCounter === 0 &&
+                            currentIndex + 8 < spaces.length
+                        ) {
                             nextIndex1 = currentIndex + 4;
                             nextIndex2 = currentIndex + 8;
-                        } else if (rotationCounter === 1) {
+                        } else if (
+                            rotationCounter === 1 &&
+                            currentIndex % 4 >= 2
+                        ) {
                             nextIndex1 = currentIndex - 1;
                             nextIndex2 = currentIndex - 2;
-                        } else if (rotationCounter === 2) {
+                        } else if (
+                            rotationCounter === 2 &&
+                            currentIndex - 8 >= 0
+                        ) {
                             nextIndex1 = currentIndex - 4;
                             nextIndex2 = currentIndex - 8;
-                        } else if (rotationCounter === 3) {
+                        } else if (
+                            rotationCounter === 3 &&
+                            currentIndex % 4 <= 1
+                        ) {
                             nextIndex1 = currentIndex + 1;
                             nextIndex2 = currentIndex + 2;
                         }
@@ -118,14 +147,31 @@
                             canBePlaced = false;
                         }
                     } else if (imgElements.length === 2) {
-                        if (rotationCounter === 0) {
+                        // Calculate the next indices based on the rotation counter
+                        if (
+                            rotationCounter === 0 &&
+                            currentIndex + 4 < spaces.length
+                        ) {
                             nextIndex1 = currentIndex + 4;
-                        } else if (rotationCounter === 1) {
+
+                        } else if (
+                            rotationCounter === 1 &&
+                            currentIndex % 4 >= 2
+                        ) {
                             nextIndex1 = currentIndex - 1;
-                        } else if (rotationCounter === 2) {
+
+                        } else if (
+                            rotationCounter === 2 &&
+                            currentIndex - 4 >= 0
+                        ) {
                             nextIndex1 = currentIndex - 4;
-                        } else if (rotationCounter === 3) {
+
+                        } else if (
+                            rotationCounter === 3 &&
+                            currentIndex % 4 <= 1
+                        ) {
                             nextIndex1 = currentIndex + 1;
+
                         }
 
                         if (
@@ -138,28 +184,26 @@
                         } else {
                             canBePlaced = false;
                         }
-                    }
-                    else {
+                    } else {
                         // append the piece to the current space
                         event.target.appendChild(imgElements[0]);
                     }
-
+                    // Reset the draggedPiece variable and rotationCounter
                     if (canBePlaced) {
                         checkWin();
+                        draggedPiece = null;
+                        rotationCounter = 0;
                     }
                 }
             }
-
-            draggedPiece = null; // reset the value of draggedPiece
         });
     });
 
-
-        function rotatePiece(piece, rotation) {
+    // Rotate the piece based on the rotation counter
+    function rotatePiece(piece, rotation) {
         const rotationAngle = rotation * 90 + 'deg';
         piece.style.transform = `rotate(${rotationAngle})`;
     }
-
 
 
     let hasWon = false;
