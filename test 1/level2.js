@@ -19,7 +19,7 @@
 
         // Add a click event listener to each piece
         piece.addEventListener('click', () => {
-            if (draggedPiece && draggedPiece.piece === pieceObj.piece) {
+            if (draggedPiece && draggedPiece.piece === pieceObj.piece && pieceObj.imgs.length > 1) {
                 if (rotationCounter === 3) {
                     rotationCounter = -1;
                 }
@@ -183,6 +183,19 @@
                             canBePlaced = false;
                         }
                     }
+                    else if (imgElements.length === 1) {
+                        const currentIndex = Array.from(spaces).indexOf(event.target);
+
+                        if (spaces[currentIndex] && !spaces[currentIndex].hasChildNodes()) {
+                            // Append the piece to the space
+                            event.target.appendChild(imgElements[0]);
+                            spaces[currentIndex].appendChild(imgElements[1]); // Use currentIndex instead of nextIndex1
+                        } else {
+                            canBePlaced = false;
+                        }
+                    }
+
+
 
                     if (canBePlaced) {
                         checkWin();
@@ -212,8 +225,8 @@
         const piece2 = document.querySelector('#piece-2');
         const piece3 = document.querySelector('#piece-3');
         const piece4 = document.querySelector('#piece-4');
-        const bord4 = document.querySelector('#bord-4');
         const bord3 = document.querySelector('#bord-3');
+        const bord4 = document.querySelector('#bord-4');
         const bord12 = document.querySelector('#bord-12');
         const bord15 = document.querySelector('#bord-15');
 
