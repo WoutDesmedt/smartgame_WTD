@@ -1,5 +1,8 @@
 'use-strict';
 (function () {
+    export function initializePuzzel(){
+
+    }
     const spaces = document.querySelectorAll('.space');
     const pieces = document.querySelectorAll('.piece');
     let draggedPiece = null;
