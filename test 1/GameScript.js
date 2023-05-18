@@ -6,6 +6,13 @@
     let draggedPiece = null;
     let rotationCounter = 0;
 
+    const resetButton = document.getElementById('reset-button');
+
+    // Add a click event listener to the reset button
+    resetButton.addEventListener('click', () => {
+        location.reload();
+    });
+
     pieces.forEach(piece => {
         const imgElements = piece.querySelectorAll('img');
         const pieceObj = { piece: piece, imgs: imgElements };
@@ -13,7 +20,7 @@
         // Add a click event listener to each piece
         piece.addEventListener('click', () => {
             if (draggedPiece && draggedPiece.piece === pieceObj.piece) {
-                if(rotationCounter === 3){
+                if (rotationCounter === 3) {
                     rotationCounter = -1;
                 }
                 rotationCounter++; // Increase the rotation counter
@@ -36,13 +43,6 @@
         space.addEventListener('dragover', event => {
             // Prevent the default action of the browser on a drag over event
             event.preventDefault();
-
-            // Check if the dragged piece is currently over bord4 or bord7
-            if (draggedPiece) {
-                // Do nothing and return early
-                return;
-            }
-
             // Set the drop effect to 'move' for all other spaces
             event.dataTransfer.dropEffect = 'move';
         });
@@ -107,8 +107,7 @@
                         } else {
                             canBePlaced = false;
                         }
-                    }
-                    else if (imgElements.length === 3) {
+                    } else if (imgElements.length === 3) {
                         // Calculate the next indices based on the rotation counter
                         if (
                             rotationCounter === 0 &&
@@ -153,26 +152,22 @@
                         // Calculate the next indices based on the rotation counter
                         if (
                             rotationCounter === 0 &&
-                            currentIndex + 4 < spaces.length &&
-                            currentIndex % 4 >= 2 // Check if not in the first two columns
+                            currentIndex + 4 < spaces.length
                         ) {
                             nextIndex1 = currentIndex + 4;
                         } else if (
                             rotationCounter === 1 &&
-                            currentIndex - 1 >= 0 &&
-                            (currentIndex - 1) % 4 >= 2 // Check if not in the first two columns
+                            currentIndex - 1 >= 0
                         ) {
                             nextIndex1 = currentIndex - 1;
                         } else if (
                             rotationCounter === 2 &&
-                            currentIndex - 4 >= 0 &&
-                            currentIndex % 4 >= 2 // Check if not in the first two columns
+                            currentIndex - 4 >= 0
                         ) {
                             nextIndex1 = currentIndex - 4;
                         } else if (
                             rotationCounter === 3 &&
-                            currentIndex + 1 < spaces.length &&
-                            (currentIndex + 1) % 4 >= 2 // Check if not in the first two columns
+                            currentIndex + 1 < spaces.length
                         ) {
                             nextIndex1 = currentIndex + 1;
                         }
@@ -187,17 +182,18 @@
                         } else {
                             canBePlaced = false;
                         }
-                    
-                } else {
-                        // append the piece to the current space
-                        event.target.appendChild(imgElements[0]);
                     }
-                    // Reset the draggedPiece variable and rotationCounter
+
                     if (canBePlaced) {
                         checkWin();
                         draggedPiece = null;
                         rotationCounter = 0;
                     }
+                } else {
+                    // append the piece to the current space
+                    event.target.appendChild(imgElements[0]);
+                    draggedPiece = null;
+                    rotationCounter = 0;
                 }
             }
         });
@@ -207,9 +203,7 @@
     function rotatePiece(piece, rotation) {
         const rotationAngle = rotation * 90 + 'deg';
         piece.style.transform = `rotate(${rotationAngle})`;
-        console.log(rotationCounter)
     }
-
 
     let hasWon = false;
 
@@ -225,7 +219,7 @@
 
         if (bord4.contains(piece1) && bord3.contains(piece2) && bord12.contains(piece4) && bord15.contains(piece3)) {
             if (!hasWon) {
-                alert('Gefeliciteerd, je hebt gewonnen!');
+                alert('Congratulations, you have won!');
                 hasWon = true;
             }
         }
