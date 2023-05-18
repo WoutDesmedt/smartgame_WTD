@@ -13,6 +13,9 @@
         // Add a click event listener to each piece
         piece.addEventListener('click', () => {
             if (draggedPiece && draggedPiece.piece === pieceObj.piece) {
+                if(rotationCounter === 3){
+                    rotationCounter = -1;
+                }
                 rotationCounter++; // Increase the rotation counter
                 rotatePiece(piece, rotationCounter);
             }
@@ -150,28 +153,28 @@
                         // Calculate the next indices based on the rotation counter
                         if (
                             rotationCounter === 0 &&
-                            currentIndex + 4 < spaces.length
+                            currentIndex + 4 < spaces.length &&
+                            currentIndex % 4 >= 2 // Check if not in the first two columns
                         ) {
                             nextIndex1 = currentIndex + 4;
-
                         } else if (
                             rotationCounter === 1 &&
-                            currentIndex % 4 >= 2
+                            currentIndex - 1 >= 0 &&
+                            (currentIndex - 1) % 4 >= 2 // Check if not in the first two columns
                         ) {
                             nextIndex1 = currentIndex - 1;
-
                         } else if (
                             rotationCounter === 2 &&
-                            currentIndex - 4 >= 0
+                            currentIndex - 4 >= 0 &&
+                            currentIndex % 4 >= 2 // Check if not in the first two columns
                         ) {
                             nextIndex1 = currentIndex - 4;
-
                         } else if (
                             rotationCounter === 3 &&
-                            currentIndex % 4 <= 1
+                            currentIndex + 1 < spaces.length &&
+                            (currentIndex + 1) % 4 >= 2 // Check if not in the first two columns
                         ) {
                             nextIndex1 = currentIndex + 1;
-
                         }
 
                         if (
@@ -184,7 +187,8 @@
                         } else {
                             canBePlaced = false;
                         }
-                    } else {
+                    
+                } else {
                         // append the piece to the current space
                         event.target.appendChild(imgElements[0]);
                     }
@@ -203,6 +207,7 @@
     function rotatePiece(piece, rotation) {
         const rotationAngle = rotation * 90 + 'deg';
         piece.style.transform = `rotate(${rotationAngle})`;
+        console.log(rotationCounter)
     }
 
 
