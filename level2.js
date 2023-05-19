@@ -18,22 +18,29 @@
     });
 
     // Fetch the JSON data
-    fetch('../package.json')
+    fetch('./package.json')
         .then(response => response.json())
         .then(data => {
-            const catsPlacement = data.cats;
-            const winCondition = data.winCondition;
+            const levelNummer = 2;
+            const levelGevraagd = `level${levelNummer}`;
+            document.title = `Level ${levelNummer}`
+            console.log(levelGevraagd);
+            const catsPlacement = data[levelGevraagd].cats;
+            const winCondition = data[levelGevraagd].winCondition;
             winConditionsArray = winCondition
             console.log(winConditionsArray)
 
             catsPlacement.forEach(cat => {
+                if(cat.id === 2 && cat.position === ""){
+                    return
+                }
                 const catId = cat.id;
                 const catPosition = cat.position;
 
                 // Use the catId and catPosition to select the corresponding elements
                 const catElement = document.querySelector(`#${catPosition}`);
                 const catImage = document.createElement('img');
-                catImage.src = '../images/cat.png';
+                catImage.src = './images/cat.png';
                 catImage.alt = 'cat';
 
                 // Append the cat image to the cat element

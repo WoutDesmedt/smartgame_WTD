@@ -1,30 +1,192 @@
 {
-  "cats": [
-    {
-      "id": 1,
-      "position": "bord-9"
-    },
-    {
-      "id": 2,
-      "position": "bord-10"
-    }
-  ],
-  "winCondition": [
-    {
-      "pieceId": "#piece-1",
-      "spaceId": "#bord-4"
-    },
-    {
-      "pieceId": "#piece-2",
-      "spaceId": "#bord-3"
-    },
-    {
-      "pieceId": "#piece-4",
-      "spaceId": "#bord-12"
-    },
-    {
-      "pieceId": "#piece-3",
-      "spaceId": "#bord-15"
-    }
-  ]
+  "level1": {
+    "levelOnline": [6],
+    "cats": [
+      {
+        "id": 1,
+        "position": "bord-9"
+      },
+      {
+        "id": 2,
+        "position": "bord-10"
+      }
+    ],
+    "winCondition": [
+      {
+        "pieceId": "#piece-1",
+        "spaceId": "#bord-4"
+      },
+      {
+        "pieceId": "#piece-2",
+        "spaceId": "#bord-3"
+      },
+      {
+        "pieceId": "#piece-4",
+        "spaceId": "#bord-12"
+      },
+      {
+        "pieceId": "#piece-3",
+        "spaceId": "#bord-15"
+      }
+    ]
+  },
+
+  "level2": {
+    "levelOnline": [75],
+    "cats": [
+      {
+        "id": 1,
+        "position": "bord-0"
+      },
+      {
+        "id": 2,
+        "position": "bord-12"
+      }
+    ],
+    "winCondition": [
+      {
+        "pieceId": "#piece-1",
+        "spaceId": "#bord-11"
+      },
+      {
+        "pieceId": "#piece-2",
+        "spaceId": "#bord-3"
+      },
+      {
+        "pieceId": "#piece-3",
+        "spaceId": "#bord-6"
+      },
+      {
+        "pieceId": "#piece-4",
+        "spaceId": "#bord-14"
+      }
+    ]
+  },
+  "level3": {
+    "levelOnline": [36],
+    "cats": [
+      {
+        "id": 1,
+        "position": "bord-6"
+      },
+      {
+        "id": 2,
+        "position": ""
+      }
+    ],
+    "winCondition": [
+      {
+        "pieceId": "#piece-1",
+        "spaceId": "#bord-15"
+      },
+      {
+        "pieceId": "#piece-2",
+        "spaceId": "#bord-3"
+      },
+      {
+        "pieceId": "#piece-3",
+        "spaceId": "#bord-8"
+      },
+      {
+        "pieceId": "#piece-4",
+        "spaceId": "#bord-0"
+      }
+    ]
+  },
+
+  "level4": {
+    "levelOnline": [46],
+    "cats": [
+      {
+        "id": 1,
+        "position": "bord-11"
+      },
+      {
+        "id": 2,
+        "position": "bord-15"
+      }
+    ],
+    "winCondition": [
+      {
+        "pieceId": "#piece-1",
+        "spaceId": "#bord-0"
+      },
+      {
+        "pieceId": "#piece-2",
+        "spaceId": "#bord-3"
+      },
+      {
+        "pieceId": "#piece-3",
+        "spaceId": "#bord-5"
+      },
+      {
+        "pieceId": "#piece-4",
+        "spaceId": "#bord-13"
+      }
+    ]
+  },
+
+  "level5": {
+    "levelOnline": [47],
+    "cats": [
+      {
+        "id": 1,
+        "position": "bord-11"
+      },
+      {
+        "id": 2,
+        "position": ""
+      }
+    ],
+    "winCondition": [
+      {
+        "pieceId": "#piece-1",
+        "spaceId": "#bord-2"
+      },
+      {
+        "pieceId": "#piece-2",
+        "spaceId": "#bord-8"
+      },
+      {
+        "pieceId": "#piece-3",
+        "spaceId": "#bord-13"
+      },
+      {
+        "pieceId": "#piece-4",
+        "spaceId": "#bord-5"
+      }
+    ]
+  },
+
+  "level6": {
+    "levelOnline": [50],
+    "cats": [
+      {
+        "id": 1,
+        "position": "bord-5"
+      },
+      {
+        "id": 2,
+        "position": ""
+      }
+    ],
+    "winCondition": [
+      {
+        "pieceId": "#piece-1",
+        "spaceId": "#bord-14"
+      },
+      {
+        "pieceId": "#piece-2",
+        "spaceId": "#bord-8"
+      },
+      {
+        "pieceId": "#piece-3",
+        "spaceId": "#bord-11"
+      },
+      {
+        "pieceId": "#piece-4",
+        "spaceId": "#bord-3"
+      }
+    ]
+  }
 }
