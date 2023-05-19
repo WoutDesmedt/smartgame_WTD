@@ -70,6 +70,7 @@ h2 {
 
 header {
     border-bottom: 0.2rem solid #6FC276;
+    overflow-x: hidden;
 
 
 }
