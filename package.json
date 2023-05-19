@@ -1,0 +1,30 @@
+{
+  "cats": [
+    {
+      "id": 1,
+      "position": "bord-9"
+    },
+    {
+      "id": 2,
+      "position": "bord-10"
+    }
+  ],
+  "winCondition": [
+    {
+      "pieceId": "#piece-1",
+      "spaceId": "#bord-4"
+    },
+    {
+      "pieceId": "#piece-2",
+      "spaceId": "#bord-3"
+    },
+    {
+      "pieceId": "#piece-4",
+      "spaceId": "#bord-12"
+    },
+    {
+      "pieceId": "#piece-3",
+      "spaceId": "#bord-15"
+    }
+  ]
+}

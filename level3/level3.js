@@ -227,6 +227,7 @@
         const piece4 = document.querySelector('#piece-4');
         const bord3 = document.querySelector('#bord-3');
         const bord14 = document.querySelector('#bord-14');
+        console.log(bord14)
         const bord11 = document.querySelector('#bord-11');
         const bord6 = document.querySelector('#bord-6');
 

@@ -5,6 +5,10 @@
     const pieces = document.querySelectorAll('.piece');
     let draggedPiece = null;
     let rotationCounter = 0;
+    let winConditionsArray;
+
+
+
 
     const resetButton = document.getElementById('reset-button');
 
@@ -12,6 +16,31 @@
     resetButton.addEventListener('click', () => {
         location.reload();
     });
+
+    // Fetch the JSON data
+    fetch('../package.json')
+        .then(response => response.json())
+        .then(data => {
+            const catsPlacement = data.cats;
+            const winCondition = data.winCondition;
+            winConditionsArray = winCondition
+            console.log(winConditionsArray)
+
+            catsPlacement.forEach(cat => {
+                const catId = cat.id;
+                const catPosition = cat.position;
+
+                // Use the catId and catPosition to select the corresponding elements
+                const catElement = document.querySelector(`#${catPosition}`);
+                const catImage = document.createElement('img');
+                catImage.src = '../images/cat.png';
+                catImage.alt = 'cat';
+
+                // Append the cat image to the cat element
+                catElement.appendChild(catImage);
+            });
+        });
+
 
     pieces.forEach(piece => {
         const imgElements = piece.querySelectorAll('img');
@@ -198,7 +227,7 @@
 
 
                     if (canBePlaced) {
-                        checkWin();
+                        checkWin(winConditionsArray);
                         draggedPiece = null;
                         rotationCounter = 0;
                     }
@@ -220,34 +249,26 @@
 
     let hasWon = false;
 
-    function checkWin() {
-        const piece1 = document.querySelector('#piece-1');
-        const piece2 = document.querySelector('#piece-2');
-        const piece3 = document.querySelector('#piece-3');
-        const piece4 = document.querySelector('#piece-4');
-        const bord3 = document.querySelector('#bord-3');
-        const bord4 = document.querySelector('#bord-4');
-        const bord12 = document.querySelector('#bord-12');
-        const bord15 = document.querySelector('#bord-15');
-        if(bord4.contains(piece1)){
-            console.log('bord4 ok')
-        }
+    function checkWin(winCondition) {
+        let hasWon = true;
 
-        if(bord3.contains(piece2)){
-            console.log('bord3 ok')
-        }
-        if(bord12.contains(piece4)){
-            console.log('bord12 ok')
-        }
-        if(bord15.contains(piece3)){
-            console.log('bord15 ok')
-        }
+        for (const condition of winCondition) {
+            const piece = document.querySelector(condition.pieceId);
+            const space = document.querySelector(condition.spaceId);
 
-        if (bord4.contains(piece1) && bord3.contains(piece2) && bord12.contains(piece4) && bord15.contains(piece3)) {
-            if (!hasWon) {
-                alert('Congratulations, you have won!');
-                hasWon = true;
+            if (!space.contains(piece)) {
+                hasWon = false;
+                break;
             }
         }
+
+        if (hasWon) {
+            alert('Congratulations, you have won!');
+        }
     }
+
+
+
+
+
 })();
