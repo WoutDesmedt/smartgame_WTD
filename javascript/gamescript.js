@@ -21,20 +21,17 @@
     fetch('./package.json')
         .then(response => response.json())
         .then(data => {
-            const levelNummer = 2;
+            const levelNummer = 1;
             const levelGevraagd = `level${levelNummer}`;
             document.title = `Level ${levelNummer}`
-            console.log(levelGevraagd);
             const catsPlacement = data[levelGevraagd].cats;
             const winCondition = data[levelGevraagd].winCondition;
             winConditionsArray = winCondition
-            console.log(winConditionsArray)
 
             catsPlacement.forEach(cat => {
                 if(cat.id === 1 && cat.position === "" || cat.id === 2 && cat.position === ""){
                     return
                 }
-                const catId = cat.id;
                 const catPosition = cat.position;
 
                 // Use the catId and catPosition to select the corresponding elements

@@ -90,7 +90,6 @@
 .pieces-container {
     display: flex;
     flex-direction: column;
-
     align-items: center;
     margin-top: 20px;
     background-color: var(--soft-green);
@@ -167,4 +166,17 @@ h2{
 
 .titel{
     color: var(--black);
+}
+
+.spel-placeholder .reset button{
+    outline: none;
+    border: none;
+    margin-top: 5rem;
+    background-color: var(--soft-green);
+    border-radius: 20px;
+    padding: 0.5rem;
+    color: var(--white);
+    font-variant: all-petite-caps;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
