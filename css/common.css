@@ -279,10 +279,7 @@ h2:not(.video h2) {
 
 /*FOOTER*/
 footer{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    display: none;
 }
 
 /* BREAKPOINTS */
