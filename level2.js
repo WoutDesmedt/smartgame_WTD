@@ -31,7 +31,7 @@
             console.log(winConditionsArray)
 
             catsPlacement.forEach(cat => {
-                if(cat.id === 2 && cat.position === ""){
+                if(cat.id === 1 && cat.position === "" || cat.id === 2 && cat.position === ""){
                     return
                 }
                 const catId = cat.id;
