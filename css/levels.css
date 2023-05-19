@@ -180,3 +180,9 @@ h2{
     font-size: 1.5rem;
     cursor: pointer;
 }
+
+/* MAIN */
+.background-block{
+    background-color: var(--white);
+    border-radius: 20px;
+}
