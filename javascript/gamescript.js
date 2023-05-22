@@ -1,5 +1,4 @@
 'use strict';
-//Puzzel: 6
 (function () {
     const spaces = document.querySelectorAll('.space');
     const pieces = document.querySelectorAll('.piece');
