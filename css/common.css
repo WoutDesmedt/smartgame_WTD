@@ -36,6 +36,12 @@ html {
     color: var(--primary)
 }
 
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* HEADER */
 
 header{
@@ -362,6 +368,7 @@ footer{
         color: var(--white);
         text-shadow: 0 2px 2px var(--black);
     }
+
 
     /*FOOTER*/
     footer{

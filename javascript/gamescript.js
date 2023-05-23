@@ -20,7 +20,9 @@
     fetch('./package.json')
         .then(response => response.json())
         .then(data => {
-            const levelNummer = 1;
+            let valuePuzzle = localStorage.getItem('valuePuzzle');
+            console.log(valuePuzzle);
+            const levelNummer = valuePuzzle;
             const levelGevraagd = `level${levelNummer}`;
             document.title = `Level ${levelNummer}`
             const catsPlacement = data[levelGevraagd].cats;
