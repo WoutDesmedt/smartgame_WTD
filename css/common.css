@@ -33,7 +33,7 @@ BOLD: 800
 html {
     background-color: var(--bg);
     font-family: Comfortaa, sans-serif;
-    color: var(--primary)
+    color: var(--primary);
 }
 
 .center{
@@ -371,12 +371,21 @@ footer{
 
 
     /*FOOTER*/
-    footer{
+    footer {
         display: flex;
         flex-direction: row;
+        align-content: center;
         justify-content: space-between;
-        align-items: center;
+        position: relative;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+
+        box-sizing: border-box;
     }
+
+
+
 
     .social-icons{
         display: flex;
