@@ -1,6 +1,7 @@
 .titel{
     display: flex;
     justify-content: center;
+    color: var(--black);
 
 }
 .stappen button:not(.active2){
@@ -25,17 +26,17 @@
 }
 
 .foto1{
-    content: url("../fotos/stap1.png");
+    content: url("../images/spelregels/stap1.png");
     max-width: 75%;
 }
 
 .foto2{
-    content: url("../fotos/stap2.png");
+    content: url("../images/spelregels/stap2.png");
     max-width: 75%;
 }
 
 .foto3{
-    content: url("../fotos/stap3.png");
+    content: url("../images/spelregels/stap3.png");
     max-width: 75%;
 
 }
@@ -52,6 +53,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    color: var(--black);
 }
 
 .text-stap h2{
@@ -63,6 +65,19 @@
 
 .text-stap p{
     max-width: 20rem;
+}
+
+.background-block{
+    background-color: var(--white);
+    border-radius: 20px;
+    margin-bottom: 3rem;
+    padding: 1rem;
+}
+
+.fotospeelbord{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* BREAKPOINTS */

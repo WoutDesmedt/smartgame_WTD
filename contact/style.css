@@ -40,16 +40,6 @@ html {
     color: var(--primary)
 }
 
-figure, body {
-    margin: 0;
-}
-
-.container {
-    max-width: 120rem;
-    margin: 0 auto;
-    padding: 0 clamp(1rem, 4vw, 8rem);
-}
-
 a:focus-visible, button:focus-visible {
     outline: 2px dotted;
     outline-offset: .2em;
@@ -68,78 +58,6 @@ h1, .subtitle {
 
 h2 {
     font-variant: petite-caps;
-}
-
-header {
-    border-bottom: 0.2rem solid #6FC276;
-}
-
-
-
-header .logo {
-    width: 20%;
-}
-
-.hamburger {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    order: -1;
-    border: none;
-    background-color: inherit;
-    color: inherit;
-    font: inherit;
-    padding: 0;
-    font-variant: all-petite-caps;
-}
-
-.hamburger .icon {
-    width: 1.5rem;
-}
-
-.hamburger .icon span {
-    height: 2px;
-    display: block;
-    background-color: var(--primary);
-    margin: 4px 0;
-    transition: transform .2s ease-in-out;
-}
-
-.hamburger[aria-expanded=true] .icon span:nth-child(1) {
-    transform: translateY(6px) rotate(45deg);
-}
-
-.hamburger[aria-expanded=true] .icon span:nth-child(2) {
-    visibility: hidden;
-}
-
-.hamburger[aria-expanded=true] .icon span:nth-child(3) {
-    transform: translateY(-6px) rotate(-45deg);
-}
-
-
-header a {
-    text-decoration: none;
-    color: inherit;
-}
-
-header .content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 2rem 0;
-}
-
-nav {
-    width: 100%;
-    display: none;
-
-}
-
-nav.hidden {
-    display: block;
-    position: relative;
-    animation: 1s up forwards;
 }
 
 form h1 {
@@ -204,74 +122,3 @@ form input[inputmode=text] {
 }
 
 
-@keyframes up {
-    0%{
-        opacity: 1;
-        margin-top: 0;
-        left: 0;
-    }
-    60%{
-        opacity: 0;
-        margin-top: 0;
-        left: 100%;
-    }
-    100%{
-        opacity: 0;
-        margin-top: -150%;
-        left: 100%;
-        visibility: hidden;
-    }
-}
-
-nav.visible {
-    display: block;
-    position: relative;
-    animation: 1s down forwards;
-}
-
-@keyframes down {
-    0%{
-        visibility: visible;
-        opacity: 0;
-        margin-top: -150%;
-        left: -100%;
-    }
-    60%{
-        opacity: 0;
-        margin-top: 0;
-        left: -100%;
-    }
-    100%{
-        opacity: 1;
-        margin-top: 0;
-        left: 0;
-
-    }
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-nav a {
-    display: block;
-    padding: 1rem 2rem;
-    text-align: center;
-    position: relative;
-}
-
-
-
-nav a::after {
-    content: '';
-    display: block;
-    position: absolute;
-    height: 2px;
-    background-color: var(--secondary);
-    bottom: 0;
-    width: 100%;
-    right: 0;
-
-}
