@@ -36,7 +36,7 @@
                 // Use the catId and catPosition to select the corresponding elements
                 const catElement = document.querySelector(`#${catPosition}`);
                 const catImage = document.createElement('img');
-                catImage.src = './images/cat.png';
+                catImage.src = '../images/cat.png';
                 catImage.alt = 'cat';
 
                 // Append the cat image to the cat element
