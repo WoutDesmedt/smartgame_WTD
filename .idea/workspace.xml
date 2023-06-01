@@ -4,19 +4,65 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bcef948-fb6e-495d-afcb-855a52bf0e68" name="Changes" comment="">
-<<<<<<< Updated upstream
-      <change afterPath="$PROJECT_DIR$/homepage.css" afterDir="false" />
+    <list default="true" id="2c69e395-322a-41bf-96fe-eba262134c02" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spelregels/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/spelregels/index.html" afterDir="false" />
-=======
-      <change afterPath="$PROJECT_DIR$/gamescript.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styleboard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gameJSbasis/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/gameJSbasis/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
->>>>>>> Stashed changes
+      <change beforePath="$PROJECT_DIR$/contact/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact/java.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/calendar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/common.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/levels.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/spelregelsstyle.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/opdracht.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/cat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/dogphotos/dog2spaces.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/dogphotos/dog3spaces.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/dogphotos/dog4spaces.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/dogphotos/dog_sitting.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/footerphotos/facebook-logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/footerphotos/google.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/footerphotos/twitter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/humanphotos/manblack.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/humanphotos/manblue.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/humanphotos/manred.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/leachesphotos/leach1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/leachesphotos/leach2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/leachesphotos/leachblue1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/leachesphotos/leachblue2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/leachesphotos/leachred1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/leachesphotos/leachred2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/logo/walkTheDog.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/spelregels/stap1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/spelregels/stap2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/spelregels/stap3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javascript/date.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javascript/gamescript.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javascript/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javascript/script_spelregels.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spelregels/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testmap/images/cat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testmap/images/dog2spaces.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testmap/images/dog3spaces.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testmap/images/dog4spaces.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testmap/images/dog_sitting.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testmap/images/leach1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testmap/images/leach2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testmap/images/leachblue1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testmap/images/leachblue2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testmap/images/leachred1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testmap/images/leachred2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testmap/images/manblack.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testmap/images/manblue.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testmap/images/manred.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testmap/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testmap/level2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testmap/opdracht.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testmap/styling.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +75,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="tsconfig.json" />
+        <option value="HTML File" />
         <option value="CSS File" />
         <option value="JavaScript File" />
       </list>
@@ -38,68 +86,60 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
-  <component name="ProjectId" id="2Os1fYsEHk7xz8mebKS7HqoHi8d" />
+  <component name="ProjectId" id="2QEQhCK0MeAHtGrOgN2CmrjsQYL" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-<<<<<<< Updated upstream
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "Wout",
-    "last_opened_file_path": "C:/Users/woton/Documents/GitHub/smartgame_WTD/spelregels",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/woton/PhpstormProjects/apiwoutdesmedt",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\PhpStorm 2022.2.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
-=======
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/woton/Documents/GitHub/smartgame_WTD/spelregels&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
->>>>>>> Stashed changes
   }
 }]]></component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\woton\Documents\GitHub\smartgame_WTD\spelregels" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\woton\PhpstormProjects\apiwoutdesmedt\Client\public" />
+      <recent name="C:\Users\woton\PhpstormProjects\apiwoutdesmedt\Client" />
+      <recent name="C:\Users\woton\PhpstormProjects\apiwoutdesmedt\Client\src" />
+      <recent name="C:\Users\woton\PhpstormProjects\apiwoutdesmedt" />
+      <recent name="C:\Users\woton\PhpstormProjects\apiwoutdesmedt\Server" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="5bcef948-fb6e-495d-afcb-855a52bf0e68" name="Changes" comment="" />
-      <created>1682334581670</created>
+      <changelist id="2c69e395-322a-41bf-96fe-eba262134c02" name="Changes" comment="" />
+      <created>1684916377476</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1682334581670</updated>
-      <workItem from="1682334583299" duration="8445000" />
-      <workItem from="1682431973127" duration="2036000" />
-<<<<<<< Updated upstream
-=======
-      <workItem from="1682497533163" duration="25000" />
-      <workItem from="1682669459028" duration="595000" />
-      <workItem from="1682709869289" duration="12000" />
-      <workItem from="1683455662663" duration="254000" />
-      <workItem from="1683458562009" duration="598000" />
-      <workItem from="1683464312812" duration="16000" />
-      <workItem from="1683543242559" duration="1576000" />
->>>>>>> Stashed changes
+      <updated>1684916377476</updated>
+      <workItem from="1684916378494" duration="44000" />
+      <workItem from="1684916446798" duration="8450000" />
+      <workItem from="1684963672659" duration="1956000" />
+      <workItem from="1685014701203" duration="568000" />
+      <workItem from="1685015295739" duration="152000" />
+      <workItem from="1685015462395" duration="6193000" />
+      <workItem from="1685106917075" duration="2697000" />
+      <workItem from="1685269918997" duration="16664000" />
+      <workItem from="1685308617575" duration="7721000" />
+      <workItem from="1685357748369" duration="1780000" />
+      <workItem from="1685465191273" duration="104000" />
+      <workItem from="1685519649212" duration="88000" />
+      <workItem from="1685529103012" duration="119000" />
+      <workItem from="1685619570676" duration="2924000" />
     </task>
     <servers />
   </component>

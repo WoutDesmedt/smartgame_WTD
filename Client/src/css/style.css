@@ -1,0 +1,176 @@
+:root {
+  /* some variables feel free to add more */
+  --error-color: rgb(200,0,0);
+  --text-color: rgb(2,2,2);
+}
+
+
+/* Mobile first approach, see the desktop version below @media (min-width: 500px) */
+body {
+  background-color: var(--secondary);
+  color: var(--text-color);
+  font-family: sans-serif;
+}
+
+#myVerySpecialForm { /* you can put this also on the form tag */
+  background-color: var(--white);
+  max-width: 80%;
+  margin: 0 auto; /* align the section & the form to the center of the page */
+  padding: 5%;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+
+h1 {
+  border-bottom: 1px solid #ddd;
+  font-size: 2em;
+  font-weight: 600;
+  margin: 0 0 1.25em 0;
+  padding: 0 0 0.5em 0;
+}
+
+form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  margin-bottom: 1.75em;
+}
+
+div.radiobutton {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+div.checkbox {
+  display: flex;
+  flex-direction: row;
+  align-items: top;
+  gap: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+/* to be consistent with other elements, see form > div, gap */
+legend {
+  margin-bottom: 0.5em;
+}
+/* Label */
+label > span.field-label, legend > span.field-label {
+  display: block;
+  font-size: 1.3em;
+  font-weight: 600;
+}
+
+
+/* if there is an error */
+label > span.field-error, legend > span.field-error {
+  display: inline-block;
+  margin-top: 0.25em;
+  color: var(--error-color);
+}
+
+/* hints or explanation for the user */
+label > span.field-hint, legend > span.field-hint {
+  display: inline-block;
+  margin: 0.25em 0em;
+  color: #666;
+}
+
+
+input {
+  border: 1px solid #ccc;
+  font-size: 1.2em;
+  padding: 0.75em;
+  width: 90%; /* fallback if calc isn't working */
+  width: calc(100% - 1.5em); /* full width minus padding */
+}
+
+.seereviewsBtn{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.seereviewsBtn a{
+  color: var(--white);
+  text-decoration: none;
+  background-color: var(--black);
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-variant: all-petite-caps;
+}
+
+fieldset {
+  border: 0;
+  padding: 0;
+}
+ 
+input[inputmode=numeric] { 
+  width: 5em; /* 5em = 16px * 5 = 80px */ 
+}
+
+input[type=radio], input[type=checkbox] {  
+  width: 1em;
+  height: 1em;
+  cursor: pointer;
+}
+
+input[type=radio] + label, 
+input[type=checkbox] + label > span.field-label  { 
+  font-size: 1em;
+  font-weight: normal;
+  display: inline; 
+  cursor: pointer;
+}
+
+button {
+  border: 0;
+  width: 100%;
+  background-color: var(--black);
+  border-radius: 5px;
+  color: #FFF;
+  font-weight: 600;
+  padding: 4% 8%;
+  cursor: pointer;
+  margin-top: 1.75em;
+  box-shadow: 0px 0px 4px 2px #ddd; /* subtle shadow */
+}
+
+button:hover {
+  background-color: #232323;
+}
+
+
+input.invalid {
+  color: var(--error-color);
+  outline-color: var(--error-color);
+}
+
+label > abbr {
+  color: var(--error-color);
+  text-decoration: none;
+}
+
+label > span.field-error.hidden{
+  display: none;
+}
+
+legend > span.field-error.hidden{
+  display: none;
+}
+
+
+/* The code below is for a desktop or tablet */
+@media (min-width: 46.875em) {
+
+  h1 {
+    font-size: 3em; 
+    font-weight: 600;
+    margin: 0 0 2.5em 0;
+  }
+}

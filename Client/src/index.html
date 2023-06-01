@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/calendar.css">
+    <script defer src="javascript/hamburgerMenu.js" type="module"></script>
+    <script defer src="./javascript/date.js" type="module"></script>
+    <link rel="icon" href="./images/logo/walkTheDog.png" type="image/icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" >
+
+    <title>Homepage</title>
+</head>
+<body>
+<div class="container">
+    <header>
+        <div class="content">
+            <div  class="logo">
+                <a href="./">
+                    <img src="./images/logo/walkTheDog.png" alt="logo">
+                    <p>WTD</p>
+                </a>
+            </div>
+
+            <button aria-expanded="false" class="hamburger" id="menu">
+                <span aria-hidden="true" class="icon">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </span>
+            </button>
+            <nav>
+                <ul>
+                    <li><a class="active" href="./"><i class="fa-solid fa-house"></i><p>Home</p></a></li>
+                    <li><a href="./spelregels"><i class="fa-solid fa-circle-info"></i><p>Spelregels</p></a></li>
+                    <li><a href="./review"><i class="fa-solid fa-address-book"></i><p>Contact</p></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="page-content">
+            <section class="intro-text">
+                <h2>Welcome To Walk The Dog!</h2>
+                <p>Here you can pick a date and get a game of the day to play and set a new highscore!</p>
+            </section>
+
+            <section class="calendar-picker">
+                <div class="calendar">
+                    <label for="datePicker"></label>
+                    <input aria-label="datepicker" type="date" id="datePicker" class="custom-datepicker">
+                </div>
+                <div>
+                    <button id="submitBtn" type="submit">
+                        Go to game!
+                    </button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+</div>
+</body>
+</html>
