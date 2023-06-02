@@ -1,4 +1,5 @@
-import { startTimer, stopTimer } from './timer.js'
+import {startTimer, stopTimer} from './timer.js'
+
 'use strict';
 (function () {
     const spaces = document.querySelectorAll('.space');
@@ -18,24 +19,23 @@ import { startTimer, stopTimer } from './timer.js'
 
     const piecesContainer = document.querySelector('.pieces-container');
 
-    piecesContainer.addEventListener('click', function() {
+    piecesContainer.addEventListener('click', function () {
         if (disableGameInteraction) {
             alert('Fill in your name and press start to play!');
         }
     });
 
 
-    startButton.addEventListener('click', function() {
+    startButton.addEventListener('click', function () {
         const inputnaam = document.querySelector('#playername');
-        if(inputnaam.value !== ""){
+        if (inputnaam.value !== "") {
             enableGameInteraction();
             disableGameInteraction = false;
             startTimer();
             const nameField = document.querySelector('.nameField');
             naam = inputnaam.value;
             nameField.innerHTML = ''
-        }
-        else{
+        } else {
             alert('Fill in the name please!')
         }
     });
@@ -82,9 +82,8 @@ import { startTimer, stopTimer } from './timer.js'
             winConditionsArray = winCondition
 
 
-
             catsPlacement.forEach(cat => {
-                if(cat.id === 1 && cat.position === "" || cat.id === 2 && cat.position === ""){
+                if (cat.id === 1 && cat.position === "" || cat.id === 2 && cat.position === "") {
                     return
                 }
                 const catPosition = cat.position;
@@ -95,7 +94,6 @@ import { startTimer, stopTimer } from './timer.js'
                 catImage.src = '../images/cat.png';
                 catImage.alt = 'cat';
 
-                // Append the cat image to the cat element
                 catElement.appendChild(catImage);
             });
 
@@ -116,7 +114,7 @@ import { startTimer, stopTimer } from './timer.js'
 
     pieces.forEach(piece => {
         const imgElements = piece.querySelectorAll('img');
-        const pieceObj = { piece: piece, imgs: imgElements };
+        const pieceObj = {piece: piece, imgs: imgElements};
 
         // Add a click event listener to each piece
         piece.addEventListener('click', () => {
@@ -142,48 +140,45 @@ import { startTimer, stopTimer } from './timer.js'
 
     spaces.forEach(space => {
         space.addEventListener('dragover', event => {
-            // Prevent the default action of the browser on a drag over event
             event.preventDefault();
-            // Set the drop effect to 'move' for all other spaces
             event.dataTransfer.dropEffect = 'move';
         });
 
         space.addEventListener('drop', event => {
-            // Check if the space is empty
+            // Kijken of de spot vrij is waar je het plaatst (dus geen elementen heeft als childs)
             if (event.target.classList.contains('space') && !event.target.hasChildNodes()) {
+                // Kijken of er een dragged piece met child nodes is
                 if (draggedPiece && draggedPiece.piece.hasChildNodes()) {
                     const imgElements = draggedPiece.imgs;
-                    const currentIndex = Array.from(spaces).indexOf(event.target);
-                    let nextIndex1, nextIndex2, nextIndex3;
+                    const currentIndex = Array.from(spaces).indexOf(event.target); //index waar je het plaatst
+                    let nextIndex1, nextIndex2, nextIndex3; //worden later berekend o.b.v. rotatie en plaats en lengte
                     let canBePlaced = true;
 
-                    // Check if all the required spaces are empty
+                    // simpele if om te kijken of het het piece is van 4 lengte
                     if (imgElements.length === 4) {
-                        // Calculate the next indices based on the rotation counter
-                        if (
-                            rotationCounter === 0 &&
-                            currentIndex + 12 < spaces.length
-                        ) {
+                        // Berekeningen om de vakjes voor de rest van de 4 pieces lange ketting te vinden o.b.v. rotatie en plaats
+                        //rotationCounter === 0 is gewoon verticaal 4 is omgekeerd verticaal
+                        //rotationCounter 1 en 3 zijn horizontaal
+                        //currentIndex + 12 < spaces.length checkt of hij binnen het veld blijft
+                        if (rotationCounter === 0 &&
+                            currentIndex + 12 < spaces.length) {
                             nextIndex1 = currentIndex + 4;
                             nextIndex2 = currentIndex + 8;
                             nextIndex3 = currentIndex + 12;
-                        } else if (
-                            rotationCounter === 1 &&
+                        } else if (rotationCounter === 1 &&
                             currentIndex % 4 >= 2 &&
-                            currentIndex % 4 !== 0 // Check if not in the second column
+                            currentIndex % 4 !== 0 // te kijken of deze niet in de 2de kolom zit want dan gaat hij buiten het speelveld
                         ) {
                             nextIndex1 = currentIndex - 1;
                             nextIndex2 = currentIndex - 2;
                             nextIndex3 = currentIndex - 3;
-                        } else if (
-                            rotationCounter === 2 &&
+                        } else if (rotationCounter === 2 &&
                             currentIndex - 12 >= 0
                         ) {
                             nextIndex1 = currentIndex - 4;
                             nextIndex2 = currentIndex - 8;
                             nextIndex3 = currentIndex - 12;
-                        } else if (
-                            rotationCounter === 3 &&
+                        } else if (rotationCounter === 3 &&
                             currentIndex % 4 <= 1
                         ) {
                             nextIndex1 = currentIndex + 1;
@@ -191,7 +186,7 @@ import { startTimer, stopTimer } from './timer.js'
                             nextIndex3 = currentIndex + 3;
                         }
 
-                        // Check if the next spaces are empty
+                        // Kijkt of de plaatsen die we gedefinieerd hebben wel degelijk vrij zijn
                         if (
                             spaces[nextIndex1] &&
                             spaces[nextIndex2] &&
@@ -200,7 +195,7 @@ import { startTimer, stopTimer } from './timer.js'
                             !spaces[nextIndex2].hasChildNodes() &&
                             !spaces[nextIndex3].hasChildNodes()
                         ) {
-                            // Append the piece to the spaces based on the rotation
+                            // Zet het stuk neer op de gedefinieerde plaatsen
                             event.target.appendChild(imgElements[0]);
                             spaces[nextIndex1].appendChild(imgElements[1]);
                             spaces[nextIndex2].appendChild(imgElements[2]);
@@ -208,8 +203,8 @@ import { startTimer, stopTimer } from './timer.js'
                         } else {
                             canBePlaced = false;
                         }
+                        //Idem voor rest van deze code juist andere berekeningen
                     } else if (imgElements.length === 3) {
-                        // Calculate the next indices based on the rotation counter
                         if (
                             rotationCounter === 0 &&
                             currentIndex + 8 < spaces.length
@@ -242,7 +237,6 @@ import { startTimer, stopTimer } from './timer.js'
                             !spaces[nextIndex1].hasChildNodes() &&
                             !spaces[nextIndex2].hasChildNodes()
                         ) {
-                            // Append the piece to the spaces based on the rotation
                             event.target.appendChild(imgElements[0]);
                             spaces[nextIndex1].appendChild(imgElements[1]);
                             spaces[nextIndex2].appendChild(imgElements[2]);
@@ -250,7 +244,6 @@ import { startTimer, stopTimer } from './timer.js'
                             canBePlaced = false;
                         }
                     } else if (imgElements.length === 2) {
-                        // Calculate the next indices based on the rotation counter
                         if (
                             rotationCounter === 0 &&
                             currentIndex + 4 < spaces.length
@@ -277,18 +270,15 @@ import { startTimer, stopTimer } from './timer.js'
                             spaces[nextIndex1] &&
                             !spaces[nextIndex1].hasChildNodes()
                         ) {
-                            // Append the piece to the space based on the rotation
                             event.target.appendChild(imgElements[0]);
                             spaces[nextIndex1].appendChild(imgElements[1]);
                         } else {
                             canBePlaced = false;
                         }
-                    }
-                    else if (imgElements.length === 1) {
+                    } else if (imgElements.length === 1) {
                         const currentIndex = Array.from(spaces).indexOf(event.target);
 
                         if (spaces[currentIndex] && !spaces[currentIndex].hasChildNodes()) {
-                            // Append the piece to the space
                             event.target.appendChild(imgElements[0]);
                             spaces[currentIndex].appendChild(imgElements[0]); // Use currentIndex instead of nextIndex1
                         } else {
@@ -296,25 +286,23 @@ import { startTimer, stopTimer } from './timer.js'
                         }
                     }
 
-
-
                     if (canBePlaced) {
                         checkWin(winConditionsArray);
                         draggedPiece = null;
                         rotationCounter = 0;
                     }
                 } else {
-                    // append the piece to the current space
                     event.target.appendChild(imgElements[0]);
                     draggedPiece = null;
                     rotationCounter = 0;
                 }
             }
         });
+
     });
 
 
-    // Rotate the piece based on the rotation counter
+    // Functie om stukken te draaien
     function rotatePiece(piece, rotation) {
         const rotationAngle = rotation * 90 + 'deg';
         piece.style.transform = `rotate(${rotationAngle})`;
@@ -346,7 +334,6 @@ import { startTimer, stopTimer } from './timer.js'
             console.log(naam)
 
 
-
             const data = {
                 idlevel: levelNummer,
                 naam: naam,
@@ -366,7 +353,6 @@ import { startTimer, stopTimer } from './timer.js'
             })
                 .then(response =>
                     response.json()
-
                 )
                 .then(result => {
                     window.location.href = '../';
@@ -378,9 +364,6 @@ import { startTimer, stopTimer } from './timer.js'
 
         }
     }
-
-
-
 
 
 })();
