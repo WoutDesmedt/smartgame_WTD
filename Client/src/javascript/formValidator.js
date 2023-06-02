@@ -18,7 +18,6 @@ export class FormValidator {
 
     addValidator(validator) {
         this.validators.push({
-            // spread de validator,
             ...validator,
             field: this.form.elements[validator.name]
         })
@@ -56,45 +55,34 @@ export class FormValidator {
 
             if (field instanceof NodeList) {
                 field.forEach(node => {
-                    // add class 'invalid' to node
                     node.classList.add('invalid');
-                    // set attribute 'aria-invalid' to 'true'
                     node.setAttribute('aria-invalid', 'true');
-                    // set attribute 'aria-describedby' to errorElement.id
                     node.setAttribute('aria-describedby', errorElement.id);
                 });
-                // find fieldset
                 const fieldSet = field[0].closest('fieldset');
                 if (fieldSet) {
-                    // add error element to legend
                     const legend = fieldSet.querySelector('legend');
                     if (legend) {
                         legend.appendChild(errorElement);
                     }
                 }
             } else {
-                // add class 'invalid' to field
                 field.classList.add('invalid');
-                // set attribute 'aria-invalid' to 'true'
                 field.setAttribute('aria-invalid', 'true');
-                // add error element to label
                 const label = document.querySelector(`label[for=${field.id}]`);
                 if (label) {
                     label.appendChild(errorElement);
                 }
-                // set attribute 'aria-describedby' to errorElement.id
                 field.setAttribute('aria-describedby', errorElement.id);
             }
         }
     }
 
     removeInlineError() {
-        // zoek en verwijder alle elementen **in het formulier**
-        // met de class `.field-error`
         this.form.querySelectorAll('.field-error')
             .forEach(element => element.remove());
 
-        this.form.querySelectorAll('.invalid')//rood vakje
+        this.form.querySelectorAll('.invalid')
             .forEach(element => {
                 element.removeAttribute('aria-invalid');
                 element.removeAttribute('aria-describedby');
@@ -109,7 +97,6 @@ export class FormValidator {
 
     onSubmit(event) {
         event.preventDefault();
-        console.log('Submit gelukt! Geen errors!')
 
         this.removeInlineError();
         let nameElement = document.querySelector('#name')
@@ -141,13 +128,10 @@ export class FormValidator {
 
             )
             .then(result => {
-                // Handle the response from the server
-                console.log(result);
                 window.location.href = '../thanksforthereview/';
 
             })
             .catch(error => {
-                // Handle any errors that occurred during the request
                 console.error('Error:', error);
             });
     }

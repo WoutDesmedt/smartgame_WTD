@@ -12,7 +12,6 @@
                 return response.json()
             })
             .then(data => {
-                console.log(data);
                 for(let i = 0; i <= data.length; i++){
                     let naam = data[i].naam
                     let tijd = data[i].tijd
@@ -20,7 +19,6 @@
                 }
             })
             .catch(error => {
-                // Handle any errors that occurred during the fetch request
                 console.error('Error:', error);
             });
     });

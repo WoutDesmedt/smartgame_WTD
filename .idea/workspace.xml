@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c69e395-322a-41bf-96fe-eba262134c02" name="Changes" comment="" />
+    <list default="true" id="2c69e395-322a-41bf-96fe-eba262134c02" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Client/src/javascript/date.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/javascript/date.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/javascript/formValidator.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/javascript/formValidator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/javascript/highscoresdisplay.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/javascript/highscoresdisplay.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/javascript/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/javascript/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/javascript/timer.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/javascript/timer.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -82,6 +88,7 @@
       <workItem from="1685529103012" duration="119000" />
       <workItem from="1685619570676" duration="2924000" />
       <workItem from="1685659795135" duration="151000" />
+      <workItem from="1685729985743" duration="520000" />
     </task>
     <servers />
   </component>

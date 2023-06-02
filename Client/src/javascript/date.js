@@ -1,12 +1,7 @@
-// Get the date picker element
 let datePicker = document.querySelector('input[type="date"]');
-
-// Get the submit button element
 let submitBtn = document.querySelector('#submitBtn');
-
-// Add an event listener to the submit button
 submitBtn.addEventListener('click', function(event) {
-    event.preventDefault(); // Prevent form submission
+    event.preventDefault();
 
     let selectedDate = datePicker.value;
     let valuePuzzle;

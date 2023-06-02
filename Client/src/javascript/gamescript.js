@@ -64,7 +64,6 @@ import { startTimer, stopTimer } from './timer.js'
         .then(response => response.json())
         .then(data => {
             let valuePuzzle = localStorage.getItem('valuePuzzle');
-            console.log(valuePuzzle);
             levelNummer = valuePuzzle;
             localStorage.setItem('levelNummer', levelNummer)
             const levelGevraagd = `level${levelNummer}`;
@@ -359,8 +358,6 @@ import { startTimer, stopTimer } from './timer.js'
 
                 )
                 .then(result => {
-                    // Handle the response from the server
-                    console.log(result);
 
                 })
                 .catch(error => {

@@ -35,8 +35,6 @@ try{
     })
 
     form.addEventListener('submit', function(event) {
-        // niet vergeten!
-        // anders: page refresh
         event.preventDefault()
 
     })
