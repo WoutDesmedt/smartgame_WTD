@@ -2,7 +2,6 @@ let datePicker = document.querySelector('input[type="date"]');
 let submitBtn = document.querySelector('#submitBtn');
 submitBtn.addEventListener('click', function(event) {
     event.preventDefault();
-
     let selectedDate = datePicker.value;
     let valuePuzzle;
 

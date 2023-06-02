@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2c69e395-322a-41bf-96fe-eba262134c02" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/src/javascript/date.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/javascript/date.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/javascript/formValidator.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/javascript/formValidator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/javascript/highscoresdisplay.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/javascript/highscoresdisplay.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/javascript/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/javascript/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/javascript/timer.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/javascript/timer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/javascript/gamescript.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/javascript/gamescript.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +87,7 @@
       <workItem from="1685529103012" duration="119000" />
       <workItem from="1685619570676" duration="2924000" />
       <workItem from="1685659795135" duration="151000" />
-      <workItem from="1685729985743" duration="520000" />
+      <workItem from="1685729985743" duration="1835000" />
     </task>
     <servers />
   </component>

@@ -12,7 +12,7 @@
                 return response.json()
             })
             .then(data => {
-                for(let i = 0; i <= data.length; i++){
+                for(let i = 0; i < data.length; i++){
                     let naam = data[i].naam
                     let tijd = data[i].tijd
                     highscoresContainer.innerHTML += `<li>${naam} - ${tijd}s</li>`;

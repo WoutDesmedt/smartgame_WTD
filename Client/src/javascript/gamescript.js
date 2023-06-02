@@ -7,6 +7,7 @@ import { startTimer, stopTimer } from './timer.js'
     let rotationCounter = 0;
     let winConditionsArray;
     let levelNummer;
+    let naam;
 
 
     const startButton = document.querySelector('#start-button');
@@ -19,16 +20,24 @@ import { startTimer, stopTimer } from './timer.js'
 
     piecesContainer.addEventListener('click', function() {
         if (disableGameInteraction) {
-            alert('Press start the counter and play!');
+            alert('Fill in your name and press start to play!');
         }
     });
 
 
     startButton.addEventListener('click', function() {
-        enableGameInteraction();
-        disableGameInteraction = false;
-        startTimer();
-
+        const inputnaam = document.querySelector('#playername');
+        if(inputnaam.value !== ""){
+            enableGameInteraction();
+            disableGameInteraction = false;
+            startTimer();
+            const nameField = document.querySelector('.nameField');
+            naam = inputnaam.value;
+            nameField.innerHTML = ''
+        }
+        else{
+            alert('Fill in the name please!')
+        }
     });
 
     function disableGameInteraction() {
@@ -329,16 +338,18 @@ import { startTimer, stopTimer } from './timer.js'
         if (hasWon) {
             const timerDisplay = document.querySelector('#timer-display');
 
+
             alert(`Congratulations, you have won in ${timerDisplay.innerHTML} ! `);
             stopTimer();
             let tijdBehaald = timerDisplay.innerHTML;
 
+            console.log(naam)
 
 
 
             const data = {
                 idlevel: levelNummer,
-                naam: "Jelle",
+                naam: naam,
                 tijd: tijdBehaald
 
 
@@ -358,7 +369,7 @@ import { startTimer, stopTimer } from './timer.js'
 
                 )
                 .then(result => {
-
+                    window.location.href = '../';
                 })
                 .catch(error => {
                     // Handle any errors that occurred during the request
