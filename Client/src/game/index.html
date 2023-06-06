@@ -30,7 +30,7 @@
                 </a>
             </div>
 
-            <button aria-expanded="false" class="hamburger" id="menu">
+            <button aria-expanded="false" class="hamburger" id="menu" aria-label="hamburgerButton">
                 <span aria-hidden="true" class="icon">
                   <span></span>
                   <span></span>
@@ -39,11 +39,11 @@
             </button>
             <nav>
                 <ul>
-                    <li><a class="active" href="../"><i class="fa-solid fa-house"></i>
+                    <li><a class="active" href="../" aria-label="link to home"><i class="fa-solid fa-house"></i>
                         <p>Home</p></a></li>
-                    <li><a href="../spelregels"><i class="fa-solid fa-circle-info"></i>
+                    <li><a href="../spelregels" aria-label="link to spelregels"><i class="fa-solid fa-circle-info"></i>
                         <p>Spelregels</p></a></li>
-                    <li><a href="../review"><i class="fa-solid fa-address-book"></i>
+                    <li><a href="../review" aria-label="link to review form"><i class="fa-solid fa-address-book"></i>
                         <p>Contact</p></a></li>
                 </ul>
             </nav>
@@ -100,17 +100,17 @@
                         <label for="playername">Name</label>
                         <input type="text" name="playername" id="playername">
                     </div>
-                    <div class="startBtn">
-                        <button id="start-button">Start</button>
+                    <div class="gameButtons">
+                        <div class="startBtn">
+                            <button id="start-button">Start</button>
+                        </div>
+                        <div class="reset">
+                            <button id="reset-button">Reset Board</button>
+                        </div>
+                        <div class="solutionBtn">
+                            <button id="solution-button">Show solution</button>
+                        </div>
                     </div>
-                    <div class="reset">
-                        <button id="reset-button">Reset Board</button>
-                    </div>
-                    <div class="solutionBtn">
-                        <button id="solution-button">Show solution</button>
-                    </div>
-
-
                 </section>
 
                 <section class="pieces-container">

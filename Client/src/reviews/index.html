@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script defer src="../javascript/hamburgerMenu.js" type="module"></script>
   <script defer src="../javascript/reviewslist.js" type="module"></script>
@@ -28,7 +28,7 @@
         </a>
       </div>
 
-      <button aria-expanded="false" class="hamburger" id="menu">
+      <button aria-expanded="false" class="hamburger" id="menu" aria-label="hamburgerButton">
                 <span aria-hidden="true" class="icon">
                   <span></span>
                   <span></span>
@@ -37,9 +37,9 @@
       </button>
       <nav>
         <ul>
-          <li><a class="active" href="../"><i class="fa-solid fa-house"></i><p>Home</p></a></li>
-          <li><a href="../spelregels/"><i class="fa-solid fa-circle-info"></i><p>Spelregels</p></a></li>
-          <li><a href="../review/"><i class="fa-solid fa-address-book"></i><p>Contact</p></a></li>
+          <li><a href="../" aria-label="link to home"><i class="fa-solid fa-house"></i><p>Home</p></a></li>
+          <li><a href="../spelregels/" aria-label="link to spelregels"><i class="fa-solid fa-circle-info"></i><p>Spelregels</p></a></li>
+          <li><a class="active" href="../review/" aria-label="link to reviews"><i class="fa-solid fa-address-book"></i><p>Contact</p></a></li>
         </ul>
       </nav>
     </div>

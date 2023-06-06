@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/common.css">
     <script defer src="../javascript/index.js" type="module"></script>
+    <script defer src="../javascript/hamburgerMenu.js" type="module"></script>
     <title>Download de usertesting research paper</title>
 </head>
 <body>
@@ -25,7 +26,7 @@
                 </a>
             </div>
 
-            <button aria-expanded="false" class="hamburger" id="menu">
+            <button aria-expanded="false" class="hamburger" id="menu" aria-label="hamburgerButton">
                 <span aria-hidden="true" class="icon">
                   <span></span>
                   <span></span>
@@ -34,9 +35,9 @@
             </button>
             <nav>
                 <ul>
-                    <li><a class="active" href="../"><i class="fa-solid fa-house"></i><p>Home</p></a></li>
-                    <li><a href="../spelregels/"><i class="fa-solid fa-circle-info"></i><p>Spelregels</p></a></li>
-                    <li><a href="./"><i class="fa-solid fa-address-book"></i><p>Contact</p></a></li>
+                    <li><a href="../" aria-label="link to home"><i class="fa-solid fa-house"></i><p>Home</p></a></li>
+                    <li><a href="../spelregels/" aria-label="link to spelregels"><i class="fa-solid fa-circle-info"></i><p>Spelregels</p></a></li>
+                    <li><a class="active" href="./" aria-label="link to review form"><i class="fa-solid fa-address-book"></i><p>Contact</p></a></li>
                 </ul>
             </nav>
         </div>
@@ -92,7 +93,7 @@
             </div>
 
             <div>
-                <button type="submit">Dien review in</button>
+                <button type="submit" class="submitBtn">Dien review in</button>
             </div>
         </form>
 

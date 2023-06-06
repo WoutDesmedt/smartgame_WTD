@@ -202,7 +202,7 @@ h2{
 .spel-placeholder .reset button, .startBtn button, .solutionBtn button{
     outline: none;
     border: none;
-    margin-top: 5rem;
+    margin-top: 1rem;
     background-color: var(--soft-green);
     border-radius: 20px;
     padding: 0.5rem;
@@ -221,6 +221,20 @@ h2{
 
 .puzzleNumber{
     color: var(--black);
+}
+
+.gameButtons{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.startBtn, .reset, .solutionBtn{
+    display: flex;
+    align-content: center;
+    justify-content: center;
 }
 
 /* BREAKPOINTS */
